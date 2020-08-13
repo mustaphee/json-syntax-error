@@ -22,8 +22,8 @@ down it's throat?
 
  ```json
  {
-     status: "fail",
-     message: "The server is unable to process your request as it is badly malformed!
+    "status": "fail",
+    "message": "The server is unable to process your request as it is badly malformed!
  }
 
  ```
@@ -53,7 +53,7 @@ app.use(resolveSyntaxErr()); // That's all, really!
 You can also pass in your custom response. It can be JSON, HTML, text or any format allowed by express `.send()`
 
 ```js
-app.use(resolveSyntaxErr({ error: 'Why are you sending a bad json?' })); // Wasn't hard, was it?!
+app.use(resolveSyntaxErr({ error: 'Why are you sending a bad json?' })); // Torture ~~his~~ their conscience!
 
 ```
 or
