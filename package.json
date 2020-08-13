@@ -1,0 +1,32 @@
+{
+  "name": "resolve-syntax-error",
+  "version": "0.8.0",
+  "description": "This is a small middleware to resolve syntax errors in your express app",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test ./node_modules/.bin/mocha --timeout 2000 --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustaphee/resolve-syntax-error.git"
+  },
+  "keywords": [
+    "express",
+    "syntax",
+    "error",
+    "body-parser",
+    "json.",
+    "json-format"
+  ],
+  "author": "Yusuff Mustapha <officialwebdev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mustaphee/resolve-syntax-error/issues"
+  },
+  "homepage": "https://github.com/mustaphee/resolve-syntax-error#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cross-env": "^7.0.2",
+    "mocha": "^8.1.1"
+  }
+}
