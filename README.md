@@ -53,7 +53,7 @@ app.use(resolveSyntaxErr()); // That's all, really!
 You can also pass in your custom response. It can be JSON, HTML, text or any format allowed by express `.send()`
 
 ```js
-app.use(resolveSyntaxErr({ error: 'Why are you sending a bad json?' })); // Torture ~~his~~ their conscience!
+app.use(resolveSyntaxErr({ error: 'Why are you sending a bad json?' })); // Torture their conscience!
 
 ```
 or
