@@ -37,7 +37,7 @@ describe('Test Resolve Syntax Error Middleware', function() {
         });
     });
 
-  // Add a failing text
+  // TODO:  Add a failing test
 
   after(function() {
      this.app.close();
