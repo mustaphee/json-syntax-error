@@ -1,8 +1,12 @@
-# resolve-syntax-error
+# json-syntax-error
 >  Middleware to help you to resolve syntax errors in your express server
 
-Tired/Concerned of seeing your server throwing Syntax error when an invalid JSON data is forced
-down it's throat?
+Ever tried sending an invalid JSON syntax to your express server when you use it with body-parser
+or `express.json()` and you get an ugly error at your client side?
+
+Tired of seeing your server throwing Syntax error when an invalid JSON data is forced
+down it's throat? 
+
 ```html
 
 <!DOCTYPE html>
@@ -23,7 +27,7 @@ down it's throat?
  ```json
  {
     "status": "fail",
-    "message": "The server is unable to process your request as it is badly malformed!
+    "message": "Invalid JSON: The server is unable to process your request as it is badly malformed!
  }
 
  ```
@@ -33,19 +37,19 @@ down it's throat?
 Install via npm
 
 ```shell
-npm install github:mustaphee/resolve-syntax-error --save
+npm install json-syntax-error --save
 ```
 
-Configuration is easy, as ac b, c. Just `require('resolve-syntax-error')` place it below your json parser (`express.json()` or `body-parser`)
+Configuration is easy, as ac b, c. Just `require('json-syntax-error')` anywhere below your json parser (`express.json()` or `bodyParser.json()`)
 
 ```js
 
-const resolveSyntaxErr =  require('resolve-syntax-error')
+const JSONSyntaxErr =  require('json-syntax-error')
 ...
 const app = express();
 ...
 app.use(express.json());
-app.use(resolveSyntaxErr()); // That's all, really!
+app.use(JSONSyntaxErr()); // That's all, really!
 
 ...
 ```
@@ -53,13 +57,13 @@ app.use(resolveSyntaxErr()); // That's all, really!
 You can also pass in your custom response. It can be JSON, HTML, text or any format allowed by express `.send()`
 
 ```js
-app.use(resolveSyntaxErr({ error: 'Why are you sending a bad json?' })); // Torture their conscience!
+app.use(JSONSyntaxErr({ error: 'Why are you sending a bad json?' })); // Torture their conscience!
 
 ```
 or
 
 ```js
-app.use(resolveSyntaxErr('<p>Really? A bad JSON? Really?</p>')); // Wasn't hard, was it?!
+app.use(JSONSyntaxErr('<p>Really? A bad JSON? Really?</p>')); // Wasn't hard, was it?!
 
 ```
 
