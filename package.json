@@ -1,33 +1,37 @@
 {
-  "name": "resolve-syntax-error",
+  "name": "json-syntax-error",
   "version": "0.8.0",
   "description": "This is a small middleware to resolve syntax errors in your express app",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test ./node_modules/.bin/mocha --timeout 2000 --exit"
+    "test": "./node_modules/.bin/mocha --timeout 500 --exit"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mustaphee/resolve-syntax-error.git"
+    "url": "git+https://github.com/dev-inately/resolve-syntax-error.git"
   },
   "keywords": [
     "express",
     "syntax",
     "error",
     "body-parser",
-    "json.",
-    "json-format"
+    "json",
+    "json-format",
+    "express json",
+    "body-parser syntax error"
   ],
   "author": "Yusuff Mustapha <officialwebdev@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mustaphee/resolve-syntax-error/issues"
+    "url": "https://github.com/dev-inately/resolve-syntax-error/issues"
   },
-  "homepage": "https://github.com/mustaphee/resolve-syntax-error#readme",
+  "homepage": "https://github.com/dev-inately/resolve-syntax-error#readme",
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
-    "cross-env": "^7.0.2",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
     "express": "^4.17.1",
     "mocha": "^8.1.1"
   }
