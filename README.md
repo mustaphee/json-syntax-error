@@ -1,5 +1,6 @@
 # json-syntax-error
->  Middleware to help you to resolve syntax errors in your express server
+![David](https://img.shields.io/david/dev-inately/json-syntax-error) ![npm bundle size](https://img.shields.io/bundlephobia/min/json-syntax-error) ![NPM](https://img.shields.io/npm/l/json-syntax-error)
+>  Middleware to help you to catch syntax errors in JSON sent to your express server and give you a much cleaner error
 
 Ever tried sending an invalid JSON syntax to your express server when you use it with body-parser
 or `express.json()` and you get an ugly error at your client side?
@@ -16,7 +17,15 @@ down it's throat?
 <title>Error</title>
 </head>
 <body>
-<pre>SyntaxError: Unexpected string in JSON at position 53<br> &nbsp; &nbsp;at JSON.parse (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at parse (/home/touchcore/Desktop/TC/tc-back-office/node_modules/body-parser/lib/types/json.js:89:19)<br> &nbsp; &nbsp;at /home/touchcore/Desktop/TC/tc-back-office/node_modules/body-parser/lib/read.js:121:18<br> &nbsp; &nbsp;at invokeCallback (/home/touchcore/Desktop/TC/tc-back-office/node_modules/raw-body/index.js:224:16)<br> &nbsp; &nbsp;at done (/home/touchcore/Desktop/TC/tc-back-office/node_modules/raw-body/index.js:213:7)<br> &nbsp; &nbsp;at IncomingMessage.onEnd (/home/touchcore/Desktop/TC/tc-back-office/node_modules/raw-body/index.js:273:7)<br> &nbsp; &nbsp;at IncomingMessage.emit (events.js:327:22)<br> &nbsp; &nbsp;at endReadableNT (_stream_readable.js:1220:12)<br> &nbsp; &nbsp;at processTicksAndRejections (internal/process/task_queues.js:84:21)</pre>
+<pre>SyntaxError: Unexpected string in JSON at position 53<br> at JSON.parse (&lt;anonymous&gt;)<br>
+   at parse (/home/pc/Desktop/TC/tc-sample/node_modules/body-parser/lib/types/json.js:89:19)<br>
+   at /home/pc/Desktop/TC/tc-sample/node_modules/body-parser/lib/read.js:121:18<br>
+   at invokeCallback (/home/pc/Desktop/TC/tc-sample/node_modules/raw-body/index.js:224:16)<br>
+   at done (/home/pc/Desktop/TC/tc-sample/node_modules/raw-body/index.js:213:7)<br>
+   at IncomingMessage.onEnd (/home/pc/Desktop/TC/tc-sample/node_modules/raw-body/index.js:273:7)<br>
+   at IncomingMessage.emit (events.js:327:22)<br>
+   at endReadableNT (_stream_readable.js:1220:12)<br> 
+   at processTicksAndRejections (internal/process/task_queues.js:84:21)</pre>
 </body>
 </html>
 ```
@@ -40,7 +49,7 @@ Install via npm
 npm install json-syntax-error --save
 ```
 
-Configuration is easy, as ac b, c. Just `require('json-syntax-error')` anywhere below your json parser (`express.json()` or `bodyParser.json()`)
+Configuration is easy, as a, b, c. Just `require('json-syntax-error')` anywhere below your json parser (`express.json()` or `bodyParser.json()`)
 
 ```js
 
